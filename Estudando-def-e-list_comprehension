@@ -1,0 +1,21 @@
+def mathematical_operations(operation, valueA, valueB):
+    if operation == '+':
+        return f"Sum: {valueA + valueB}"
+    elif operation == '-':
+        return f"Subtraction: {valueA - valueB}"
+    elif operation == '*':
+        return f"multiply: {valueA * valueB}"
+    elif operation == '/':
+        return "Error: Division by zero" if valueB == 0 else f"Division: {valueA / valueB}"
+    elif operation == '**':
+        return f"rooting: {valueA ** valueB}" 
+    else:
+        return "Error: invalid operation"
+    
+a = int(input('Type the first number: '))
+b = int(input('Type the second number: '))
+
+operations = ['+', '-', '*', '/', '**']
+results = [mathematical_operations(op, a, b) for op in operations]
+
+print("\n".join(results))
